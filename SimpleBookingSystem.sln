@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookingSystemApi", "SimpleBookingSystemApi\SimpleBookingSystemApi.csproj", "{1C60ADAC-9103-49AB-B940-F32D0004ECD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookingSystemBlazor", "SimpleBookingSystemBlazor\SimpleBookingSystemBlazor.csproj", "{652825F1-615D-4AE6-BA3A-BFF020ACB3DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C60ADAC-9103-49AB-B940-F32D0004ECD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C60ADAC-9103-49AB-B940-F32D0004ECD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C60ADAC-9103-49AB-B940-F32D0004ECD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C60ADAC-9103-49AB-B940-F32D0004ECD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{652825F1-615D-4AE6-BA3A-BFF020ACB3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652825F1-615D-4AE6-BA3A-BFF020ACB3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652825F1-615D-4AE6-BA3A-BFF020ACB3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652825F1-615D-4AE6-BA3A-BFF020ACB3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+@page "/Success"
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedSessionStorage ProtectedSessionStore
+
+<h3> You have Succesfully booked the resource with the id = @id</h3>
+
+@code {
+
+    private long id;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var protectedBrowserStorageResultId = await ProtectedSessionStore.GetAsync<long>("id");
+        id = protectedBrowserStorageResultId.Value;
+        Console.WriteLine($"EMAIL SENT TO admin@admin.com FOR CREATED BOOKING WITH ID {id}");
+    }
+
+}

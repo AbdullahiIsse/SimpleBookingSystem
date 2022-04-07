@@ -1,0 +1,64 @@
+@page "/resources"
+@page "/"
+
+
+@using SimpleBookingSystemBlazor.Data
+@using SimpleBookingSystemBlazor.Model
+@inject IResourceData resourceData
+@inject NavigationManager navMan;
+
+
+<h1>Resources</h1>
+
+
+@if (showResources == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Booking</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var resource in showResources)
+        {
+            <tr>
+                <td>@resource.Id</td>
+                <td>@resource.Name</td>
+                <td>
+                    <button @onclick="@(() => book(resource.Id))">
+                        Book Here
+                    </button>
+                </td>
+
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Resource> showResources = new List<Resource>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        showResources = await resourceData.GetResources();
+    }
+
+    private  void book(int resourceId)
+    {
+      
+        navMan.NavigateTo($"Booking/{resourceId}");
+    }
+
+}
